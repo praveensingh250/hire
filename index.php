@@ -1,8 +1,17 @@
+<?php
+$messege = "";
+if (isset($_GET['status'])) {
+
+  $satus = $_GET['status'];
+  if ($satus==1) {
+    $messege = "your username and password is not correct ";
+  }
+  
+}
+?>
 <!doctype html>
 <html lang="en">
 
-
-<!-- Mirrored from preview.easetemplate.com/influence/html/influence/pages/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 19 Feb 2024 09:45:08 GMT -->
 <head>
 
   <!-- Required meta tags -->
@@ -36,22 +45,25 @@
           <a href="#"><img class="logo-img" src="assets/images/logo.png" alt="logo"></a><span
             class="splash-description">Please enter your user information.</span></div>
         <div class="card-body">
-          <form>
+          <form action="Logincode.php" method="post">
             <div class="form-group mb-2">
-              <input class="form-control" id="username" type="text" placeholder="Username" autocomplete="off">
+              <input class="form-control" id="username" type="text" placeholder="Username"name="username" value="" autocomplete="off">
             </div>
             <div class="form-group mb-2">
-              <input class="form-control" id="password" type="password" placeholder="Password">
-            </div>
+              <input class="form-control" id="password" type="password"name="password"name="password" value="" placeholder="" placeholder="Password">
+            </div> 
             <div class="form-group">
               <label class="custom-control custom-checkbox">
                 <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember
                   Me</span>
               </label>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" href="#">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" href="dashboard.php">Sign in</button>
           </form>
         </div>
+        <?php 
+echo $messege;
+        ?>
         <!-- <div class="card-footer bg-white p-0  ">
           <div class="card-footer-item card-footer-item-bordered border-right d-inline-block  ">
             <a href="sign-up.html" class="footer-link">Create An Account</a></div>
