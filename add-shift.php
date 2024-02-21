@@ -1,5 +1,9 @@
 
 <?php
+session_start();
+if (!isset($_SESSION['session_clicked'])) {
+   header("Location:index.php");
+};
 $sucess = ""; 
 if (isset($_GET['id'])) {
   $id = $_GET['id'];
@@ -124,7 +128,7 @@ if ($id==2) {
                  
                   <div class="card-body">
                     <form method="POST" action="common/shift_station.php">
-                      <div class="form-group">
+                      <!-- <div class="form-group">
                         <label for="input-select">Select Station</label>
                         <select class="form-control" id="input-select" name="station_code">
                           <?php 
@@ -138,10 +142,14 @@ if ($id==2) {
                           <option value="<?php echo $row['station_id']; ?>"><?php echo $row['statin_name']; ?></option>
                         <?php }; ?>
                         </select>
+                      </div> -->
+                      <div class="form-group">
+                        <label for="inputText3" class="col-form-label">Shift Name</label>
+                        <input id="inputText3" name="emp_name" type="text" class="form-control">
                       </div>
                       <div class="form-group">
-                        <label for="inputText3" class="col-form-label">Station Name</label>
-                        <input id="inputText3" name="emp_name" type="text" class="form-control">
+                        <label for="inputText3" class="col-form-label">Hours</label>
+                        <input id="inputText3" name="hours" type="text" class="form-control">
                       </div>
                      
                       <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block" >Add Station</button>

@@ -22,6 +22,10 @@
                 <a class="nav-link" href="add-employee.php" ><i class="fa fa-fw fa-user"></i>Add User</a>
                 
               </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="user_list.php" ><i class="fa fa-fw fa-user"></i>User List</a>
+                
+              </li>
              <li class="nav-item ">
                 <a class="nav-link" href="add-station.php" ><i class="fa fa-fw fa-user"></i>Add Station</a>
                 
@@ -30,9 +34,15 @@
                 <a class="nav-link" href="add-shift.php" ><i class="fa fa-fw fa-user"></i>Add Shift</a>
                 
               </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="roster.php" ><i class="fa fa-fw fa-user"></i>Roster</a>
+                
+              </li>
               
-              
-             
+             <li class="nav-item ">
+                <a class="nav-link" href="whatsapp_data_submit.php" ><i class="fa fa-fw fa-user"></i>Attendance day by day</a>
+                
+              </li>
              
             
            

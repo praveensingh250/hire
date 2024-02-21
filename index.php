@@ -42,7 +42,8 @@ if (isset($_GET['status'])) {
     <div class="splash-container">
       <div class="card shadow-sm">
         <div class="card-header text-center">
-          <a href="#"><img class="logo-img" src="assets/images/logo.png" alt="logo"></a><span
+          <!-- <a href="#"><img class="logo-img" src="assets/images/logo.png" alt="logo"></a> -->
+          <span
             class="splash-description">Please enter your user information.</span></div>
         <div class="card-body">
           <form action="Logincode.php" method="post">
@@ -50,7 +51,7 @@ if (isset($_GET['status'])) {
               <input class="form-control" id="username" type="text" placeholder="Username"name="username" value="" autocomplete="off">
             </div>
             <div class="form-group mb-2">
-              <input class="form-control" id="password" type="password"name="password"name="password" value="" placeholder="" placeholder="Password">
+              <input class="form-control" id="password" type="password" name="password" name="password" value="" placeholder="Password">
             </div> 
             <div class="form-group">
               <label class="custom-control custom-checkbox">
@@ -58,7 +59,7 @@ if (isset($_GET['status'])) {
                   Me</span>
               </label>
             </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block" href="dashboard.php">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
           </form>
         </div>
         <?php 

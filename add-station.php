@@ -1,5 +1,9 @@
 
 <?php
+session_start();
+if (!isset($_SESSION['session_clicked'])) {
+   header("Location:index.php");
+};
 $sucess = ""; 
 if (isset($_GET['id'])) {
   $id = $_GET['id'];

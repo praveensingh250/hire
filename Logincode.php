@@ -1,7 +1,7 @@
 <?php 
    
 
-    include "config.php";
+    include "config/config.php";
 //include "../config/config.php";
 
     
@@ -21,8 +21,9 @@
           
         if($count == 1){  
             //echo "<h1><center> Login successful </center></h1>"; 
-            
-            header("Location:dashboard.php");
+            session_start();
+             $_SESSION['session_clicked'] =  true;
+            header("Location:roster.php");
             die();
         }  
         else{  
